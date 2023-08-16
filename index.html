@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="bg-gray-800 p-4 sticky top-0 z-10">
+      <div class="flex items-center justify-between">
+        <div>
+          <a href="#" class="text-white text-xl font-semibold">Logo</a>
+        </div>
+        <div class="hidden md:flex space-x-4" id="menu">
+          <a href="#" class="text-white hover:underline">Strona główna</a>
+          <a href="#" class="text-white hover:underline">O nas</a>
+
+          <div class="relative group inline-block text-white">
+            <button class="hover:underline">Usługi</button>
+            <ul
+              class="absolute left-0 hidden mt-2 bg-gray-800 text-white p-2 space-y-1"
+            >
+              <li><a href="#" class="hover:underline">Usługa 1</a></li>
+              <li><a href="#" class="hover:underline">Usługa 2</a></li>
+              <li><a href="#" class="hover:underline">Usługa 3</a></li>
+            </ul>
+          </div>
+
+          <a href="#" class="text-white hover:underline">Portfolio</a>
+          <a href="#" class="text-white hover:underline">Kontakt</a>
+        </div>
+        <div class="md:hidden">
+          <button id="hamburger" class="text-white">
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                id="hamburger-icon"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+            <svg
+              class="h-6 w-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                id="close-icon"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>
