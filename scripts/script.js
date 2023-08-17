@@ -36,6 +36,8 @@
 // });
 
 //menu mobile
+const menuMobile = document.getElementById("menu-mobile");
+//dropdown dla ofert
 const offerBtn = document.getElementById("offer-btn");
 const hiddenListMobile = document.getElementById("hidden-list-mobile");
 const chevronMobile = document.getElementById("chevronMobile");
@@ -69,11 +71,13 @@ searchInput.addEventListener("blur", () => {
 });
 
 offerBtn.addEventListener("click", () => {
+  hiddenListMobile.classList.toggle("opacity-100");
+  hiddenListMobile.classList.toggle("transform");
   hiddenListMobile.classList.toggle("hidden");
   chevronMobile.classList.toggle("rotate-180");
 });
 
-//hamburger animacja
+//hamburger animacja oraz pojawianie sie menu
 hamburger.addEventListener("click", () => {
   if (!hamburger.classList.contains("open")) {
     hamburger.classList.add("open");
@@ -81,9 +85,10 @@ hamburger.addEventListener("click", () => {
     lineFirst.style.width = "30px";
     lineSecond.style.display = "none";
     lineSecond.style.opactiy = 0;
-
     lineThird.style.transform = "rotate(-405deg) translate(2px, -2px)";
     lineThird.style.width = "30px";
+
+    menuMobile.classList.add("opacity-100");
   } else {
     hamburger.classList.remove("open");
     lineFirst.style.transform = "";
@@ -92,6 +97,7 @@ hamburger.addEventListener("click", () => {
     lineSecond.style.display = "inline-block";
     lineSecond.style.backgroundColor = "white";
     lineThird.style.width = "20px";
+    menuMobile.classList.remove("opacity-100");
 
     setTimeout(() => {
       lineSecond.style.backgroundColor = "black";
