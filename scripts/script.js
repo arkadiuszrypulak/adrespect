@@ -27,26 +27,25 @@ const lineThird = document.getElementById("third-line");
 searchContainerMobile.addEventListener("click", () => {
   searchInputMobile.classList.remove("hidden");
   searchIconMobile.classList.add("absolute");
-  searchIconMobile.classList.add("top-5");
   searchIconMobile.classList.add("right-8");
   searchIconMobile.style.transform = "translateX(100%)";
   searchIconMobile.style.animation = "none";
   searchInputMobile.focus();
 });
-searchInput.addEventListener("blur", () => {
+searchInputMobile.addEventListener("blur", () => {
   if (searchInput.value === "") {
-    searchInput.classList.add("hidden");
-    searchIcon.style.transform = "";
-    searchIcon.classList.add("top-0");
-    searchIcon.style.animation = "";
-    searchIcon.classList.remove("right-8");
+    searchInputMobile.classList.add("hidden");
+    searchIconMobile.classList.remove("absolute");
+    searchIconMobile.classList.remove("top-0");
+    searchIconMobile.style.animation = "";
+    searchIconMobile.style.transform = "";
+    searchIconMobile.classList.remove("right-8");
   }
 });
 //Wyszukiwarka desktop
 searchContainer.addEventListener("click", () => {
   searchInput.classList.remove("hidden");
   searchIcon.classList.add("absolute");
-  searchIcon.classList.add("top-5");
   searchIcon.classList.add("right-8");
   searchIcon.style.transform = "translateX(100%)";
   searchIcon.style.animation = "none";
@@ -55,9 +54,10 @@ searchContainer.addEventListener("click", () => {
 searchInput.addEventListener("blur", () => {
   if (searchInput.value === "") {
     searchInput.classList.add("hidden");
-    searchIcon.style.transform = "";
-    searchIcon.classList.add("top-0");
+    searchIcon.classList.remove("absolute");
+    searchIcon.classList.remove("top-0");
     searchIcon.style.animation = "";
+    searchIcon.style.transform = "";
     searchIcon.classList.remove("right-8");
   }
 });
