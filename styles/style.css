@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;800&family=Montserrat:wght@100;400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;800&family=Montserrat:wght@100;400;500;600;800&display=swap");
+
+:root {
+  --primary-color: #1b5b31;
+  --grey-btn-color: #f5f0ec;
+  --bg-intro: #dcc1ab;
+  --bg-oferta: #f5f0ec;
+  --black-color: #111;
+}
 
 * {
   box-sizing: border-box;
@@ -15,4 +23,79 @@ h2,
 h3,
 h4 {
   font-family: Montserrat;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 115%;
+}
+
+p {
+  color: var(--black-color);
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+}
+
+.menu {
+  padding: 0.7rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu:hover {
+  color: var(--primary-color);
+}
+
+#intro {
+  background-color: var(--bg-intro);
+}
+
+#oferta {
+  background-color: var(--bg-oferta);
+}
+
+#firma {
+  height: 70vh;
+  color: var(--grey-btn-color);
+  background-color: var(--primary-color);
+}
+
+.contact-btn {
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--grey-btn-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.contact-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.realisation-btn {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.more-btn {
+  color: var(--primary-color);
+  gap: 10px;
+  border-bottom: 1px solid var(--primary-color);
+  transition: all 0.5s ease-in-out;
+}
+
+.more-btn:hover {
+  gap: 12px;
+}
+
+.small-description {
+  color: var(--primary-color);
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: -0.12px;
+}
+
+.color-grey-text {
+  color: var(--grey-btn-color);
 }

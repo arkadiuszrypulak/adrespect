@@ -1,80 +1,79 @@
-// const hamburgerButton = document.getElementById("hamburger");
-// const hamburgerIcon = document.getElementById("hamburger-icon");
-// const closeIcon = document.getElementById("close-icon");
-// const menu = document.getElementById("menu");
-// const servicesButton = document.getElementById("services-btn");
-// const servicesMenu = document.getElementById("services-menu");
-// let isMenuOpen = false;
-// let isServicesMenuOpen = false;
-
-// hamburgerButton.addEventListener("click", () => {
-//   if (isMenuOpen) {
-//     hamburgerIcon.classList.remove("hidden");
-//     hamburgerIcon.classList.add("block");
-//     closeIcon.classList.remove("block");
-//     closeIcon.classList.add("hidden");
-//     menu.classList.add("hidden");
-//   } else {
-//     hamburgerIcon.classList.remove("block");
-//     hamburgerIcon.classList.add("hidden");
-//     closeIcon.classList.remove("hidden");
-//     closeIcon.classList.add("block");
-//     menu.classList.remove("hidden");
-//   }
-
-//   isMenuOpen = !isMenuOpen;
-// });
-
-// servicesButton.addEventListener("click", () => {
-//   if (isServicesMenuOpen) {
-//     servicesMenu.classList.add("hidden");
-//   } else {
-//     servicesMenu.classList.remove("hidden");
-//   }
-
-//   isServicesMenuOpen = !isServicesMenuOpen;
-// });
-
 //menu mobile
 const menuMobile = document.getElementById("menu-mobile");
-//dropdown dla ofert
-const offerBtn = document.getElementById("offer-btn");
+const overlay = document.getElementById("overlay");
+//dropdown dla ofert mobile
+const offerBtnMobile = document.getElementById("offer-btn-mobile");
 const hiddenListMobile = document.getElementById("hidden-list-mobile");
 const chevronMobile = document.getElementById("chevronMobile");
-//elementy wyszukiwarki
+//dropdown dla ofert desktopu
+const offerBtn = document.getElementById("offer-btn");
+const hiddenList = document.getElementById("hidden-list");
+const chevron = document.getElementById("chevron");
+//elementy wyszukiwarki - desktop
 const searchContainer = document.getElementById("searchContainer");
 const searchInput = document.getElementById("searchInput");
 const searchIcon = document.getElementById("searchIcon");
+//elementy wyszukiwarki - mobile
+const searchContainerMobile = document.getElementById("searchContainer-mobile");
+const searchInputMobile = document.getElementById("searchInput-mobile");
+const searchIconMobile = document.getElementById("searchIcon-mobile");
 //hamburger elementy
 const hamburger = document.getElementById("hamburger");
 const lineFirst = document.getElementById("first-line");
 const lineSecond = document.getElementById("second-line");
 const lineThird = document.getElementById("third-line");
 
+//Wyszukiwarka mobile
+searchContainerMobile.addEventListener("click", () => {
+  searchInputMobile.classList.remove("hidden");
+  searchIconMobile.classList.add("absolute");
+  searchIconMobile.classList.add("top-5");
+  searchIconMobile.classList.add("right-8");
+  searchIconMobile.style.transform = "translateX(100%)";
+  searchIconMobile.style.animation = "none";
+  searchInputMobile.focus();
+});
+searchInput.addEventListener("blur", () => {
+  if (searchInput.value === "") {
+    searchInput.classList.add("hidden");
+    searchIcon.style.transform = "";
+    searchIcon.classList.add("top-0");
+    searchIcon.style.animation = "";
+    searchIcon.classList.remove("right-8");
+  }
+});
+//Wyszukiwarka desktop
 searchContainer.addEventListener("click", () => {
   searchInput.classList.remove("hidden");
   searchIcon.classList.add("absolute");
-  searchIcon.classList.add("top-0");
+  searchIcon.classList.add("top-5");
   searchIcon.classList.add("right-8");
   searchIcon.style.transform = "translateX(100%)";
   searchIcon.style.animation = "none";
   searchInput.focus();
 });
-
 searchInput.addEventListener("blur", () => {
   if (searchInput.value === "") {
     searchInput.classList.add("hidden");
     searchIcon.style.transform = "";
+    searchIcon.classList.add("top-0");
     searchIcon.style.animation = "";
     searchIcon.classList.remove("right-8");
   }
 });
-
-offerBtn.addEventListener("click", () => {
+//Animacja strzałki w oferty - mobile
+offerBtnMobile.addEventListener("click", () => {
   hiddenListMobile.classList.toggle("opacity-100");
   hiddenListMobile.classList.toggle("transform");
   hiddenListMobile.classList.toggle("hidden");
   chevronMobile.classList.toggle("rotate-180");
+});
+//Animacja strzałki w oferty - desktop
+offerBtn.addEventListener("click", () => {
+  hiddenList.classList.toggle("opacity-100");
+  hiddenList.classList.toggle("transform");
+  hiddenList.classList.toggle("hidden");
+  chevron.classList.toggle("rotate-180");
 });
 
 //hamburger animacja oraz pojawianie sie menu
@@ -89,6 +88,10 @@ hamburger.addEventListener("click", () => {
     lineThird.style.width = "30px";
 
     menuMobile.classList.add("opacity-100");
+    menuMobile.classList.remove("hidden");
+    overlay.classList.remove("pointer-events-none");
+    overlay.classList.remove("hidden");
+    overlay.classList.add("fixed");
   } else {
     hamburger.classList.remove("open");
     lineFirst.style.transform = "";
@@ -99,8 +102,20 @@ hamburger.addEventListener("click", () => {
     lineThird.style.width = "20px";
     menuMobile.classList.remove("opacity-100");
 
+    overlay.classList.add("pointer-events-none");
+    overlay.classList.remove("fixed");
+    overlay.classList.add("hidden");
+
     setTimeout(() => {
       lineSecond.style.backgroundColor = "black";
+      menuMobile.classList.add("hidden");
     }, 200);
   }
+});
+// Slider
+const rightBtn = document.getElementById("right-btn");
+const leftBtn = document.getElementById("left-btn");
+
+rightBtn.addEventListener("click", () => {
+  alert("klik");
 });
