@@ -147,20 +147,18 @@
     </nav>
     <!-- Intro -->
     <section id="intro">
-      <div class="h-full flex flex-col items-center md:h-2/3 md:flex-row">
+      <div class="h-screen flex flex-col items-center md:h-2/3 md:flex-row">
         <div
           class="h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11"
         >
-          <h1 class="text-2xl py-2 md:text-4xl lg:text-6xl">
+          <h1 class="text-2xl py-2 md:text-4xl lg:text-5xl xl-text-6xl">
             Nowoczesna aranżacja Twojego ogrodu
           </h1>
-          <div class="flex-grow text-justify">
-            <p class="h-full">
-              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
-              podejściem do każdego projektu.
-            </p>
-          </div>
+          <p class="flex items-center text-justify flex-grow h-full text-sm">
+            Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+            realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+            podejściem do każdego projektu.
+          </p>
           <div
             class="flex flex-col gap-1 mx-auto justify-center w-full py-2 lg:gap-10 lg:flex-row"
           >
@@ -204,9 +202,9 @@
     </section>
     <!-- Oferta -->
     <section id="oferta">
-      <div class="min-h-2/3">
+      <div class="min-h-2/3 pb-12">
         <div class="container mx-auto">
-          <div class="p-10">
+          <div class="p-10 md:py-24">
             <span class="small-description">Oferta</span>
             <h2 class="text-4xl lg:text-5xl pb-6 lg:pb-8">
               Działamy kompleksowo
@@ -221,11 +219,11 @@
           </div>
         </div>
         <div
-          class="flex flex-col lg:flex-row gap-10 items-stretch justify-center w-9/10"
+          class="flex flex-col container mx-auto lg:flex-row gap-10 items-stretch justify-center w-9/10"
         >
           <a
             href="#"
-            class="flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 lg:w-1/4 transition duration-300 hover:shadow-lg"
+            class="flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 md:w-full transition duration-300 hover:shadow-lg"
           >
             <div class="flex-grow pb-8 flex items-center">
               <img src="/images/SVG/pencil.svg" alt="zaczarowany ołówek" />
@@ -247,7 +245,7 @@
           </a>
           <a
             href="#"
-            class="flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 lg:w-1/4 transition duration-300 hover:shadow-lg"
+            class="flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 md:w-full transition duration-300 hover:shadow-lg"
           >
             <div class="flex-grow pb-8 flex items-center">
               <img src="/images/SVG/eye.svg" alt="Oko które widzi wszystko" />
@@ -269,7 +267,7 @@
           </a>
           <a
             href="#"
-            class="flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 lg:w-1/4 transition duration-300 hover:shadow-lg"
+            class="flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 md:w-full transition duration-300 hover:shadow-lg"
           >
             <div class="flex-grow pb-8 flex items-center">
               <img src="/images/SVG/stars.svg" alt="Gwiazdy" />
@@ -293,20 +291,21 @@
       </div>
     </section>
     <!-- O firmie -->
-    <section id="firma" class="overflow-hidden">
-      <div class="flex justify-between items-start">
-        <div class="flex-shrink-0 w-1/2">
-          <img
-            src="/images/Baner-firma.png"
-            alt="Obrazek"
-            class="w-screen h-1/2"
-          />
+    <section id="firma" class="overflow-hidden md:min-h-3/4">
+      <div class="flex flex-col justify-between items-start h-full md:flex-row">
+        <div class="flex-shrink-0 h-1/2 w-full overflow-hidden md:w-1/2">
+          <img src="/images/Baner-firma.png" alt="Obrazek" class="w-screen" />
         </div>
-        <div class="flex-grow p-8 w-1-2">
-          <div>
-            <p class="color-grey-text text-sm">O firmie</p>
-            <h3 class="color-grey-text">Tworzymy z pasją</h3>
-            <p class="color-grey-text">
+        <div class="flex-grow self-center p-6 lg:p-10 min-h-1/2 h-auto w-1-2">
+          <div class="flex flex-col h-full justify-center gap-5 lg:gap-12">
+            <div>
+              <p class="color-grey-text text-sm">O firmie</p>
+              <h3 class="color-grey-text text-3xl lg:text-5xl">
+                Tworzymy z pasją
+              </h3>
+            </div>
+
+            <p class="color-grey-text text-sm text-justify leading-6">
               Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
               wykwalifikowani projektanci oraz architekci, których zadaniem jest
               rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
@@ -315,7 +314,7 @@
               małoobsługowe, dostosowane do współczesnego trybu życia.
             </p>
             <div
-              class="flex border justify-center items-center rounded-xl w-64"
+              class="flex border justify-center items-center px-1 py-3 gap-4 rounded-3xl w-64 hover:gap-6 cursor-pointer"
             >
               <span>Poznaj nas bliżej</span>
               <img
@@ -326,6 +325,86 @@
           </div>
         </div>
       </div>
+    </section>
+    <!-- Realizacje -->
+    <section id="realizacje"><p>realizacje</p></section>
+    <!-- Baner social  -->
+    <section id="social">
+      <div class="baner container mx-auto p-10">
+        <div
+          class="flex flex-col lg:flex-row justify-center items-center h-max gap-8 lg:gap-16"
+        >
+          <div class="w-full lg:w-4/5 mx-auto">
+            <h3 class="font-normal text-2xl text-center lg:text-left">
+              Zostańmy w kontakcie!
+            </h3>
+            <h4 class="font-normal text-2xl text-center lg:text-left">
+              Znajdziesz nas na
+              <span class="italic font-medium">Instagramie</span>.
+            </h4>
+          </div>
+          <div
+            class="flex flex-col justify-center items-center gap-3 w-1/2 lg:w-1/5"
+          >
+            <p class="font-base font-normal text-center leading-6">
+              Śledź nasze najnowsze realizacje!
+            </p>
+            <div
+              class="instagram-btn flex justify-center items-center w-max text-center py-2.5 px-6 rounded-3xl cursor-pointer"
+            >
+              Instagram
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <section id="footer">
+      <footer class="container mx-auto py-20">
+        <div class="flex items-center pb-16">
+          <div class="w-1/2">
+            <img src="/images/SVG/logo-white.svg" alt="Białe logo" />
+          </div>
+          <div class="flex items-center w-1/2">
+            <span class="hidden lg:inline-block font-base w-3/5"
+              >Daj znać, co możemy dla Ciebie zrobić!</span
+            >
+            <div
+              class="contact-btn w-full text-sm rounded-3xl text-gray-100 m-auto py-2 px-4 text-center leading-6 w-1/2 cursor-pointer md:w-3/5 lg:text-base lg:w-2/5"
+            >
+              Skontaktuj się z nami
+            </div>
+          </div>
+        </div>
+        <hr class="h-px mx-auto w-3/4 lg:w-full" />
+        <div class="pt-16 pb-32">
+          <div class="flex flex-col lg:flex-row text-sm">
+            <div
+              class="flex justify-center gap-8 w-full lg:justify-start lg:w-1/2"
+            >
+              <a href="#">Kontakt</a>
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">LinkedIn</a>
+            </div>
+            <div
+              class="flex justify-center w-full py-4 gap-10 lg:w-1/2 lg:p-0 lg:justify-end"
+            >
+              <span>000-000-000</span>
+              <span>giarddesign@kontakt.pl</span>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex justify-around items-center text-xs lg:justify-between lg:text-base"
+        >
+          <span>Prawa zastrzeżone © 2022</span>
+          <div class="flex items-center gap-3">
+            made by
+            <img src="/images/SVG/adRespect.svg" />
+          </div>
+        </div>
+      </footer>
     </section>
     <script src="/scripts/script.js" defer></script>
   </body>
