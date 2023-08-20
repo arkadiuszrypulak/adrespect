@@ -147,7 +147,10 @@
     </nav>
     <!-- Intro -->
     <section id="intro">
-      <div class="h-screen flex flex-col items-center md:h-2/3 md:flex-row">
+      <div
+        id="slider"
+        class="h-screen flex flex-col items-center transition-transform duration-300 ease-in-out md:h-2/3 md:flex-row"
+      >
         <div
           class="h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11"
         >
@@ -175,7 +178,6 @@
             </div>
           </div>
         </div>
-
         <div
           class="h-1/2 order-1 md:order-2 md:h-2/3 w-full md:w-1/2 z-10 relative"
         >
@@ -187,13 +189,13 @@
 
           <div
             id="right-btn"
-            class="absolute flex justify-center items-center h-14 w-14 bottom-0 right-0 hover:animate-bounce"
+            class="absolute flex justify-center items-center h-14 w-14 bottom-0 right-0 cursor-pointer"
           >
             <img src="/images/SVG/arrowRight.svg" />
           </div>
           <div
             id="left-btn"
-            class="absolute flex justify-center items-center h-14 w-14 bottom-0 right-16 hover:animate-bounce"
+            class="absolute flex justify-center items-center h-14 w-14 bottom-0 right-16 cursor-pointer"
           >
             <img src="/images/SVG/arrowLeft.svg" />
           </div>
@@ -327,7 +329,87 @@
       </div>
     </section>
     <!-- Realizacje -->
-    <section id="realizacje"><p>realizacje</p></section>
+    <section id="realizacje" class="flex flex-col pb-11 pt-32 gap-24 w-full">
+      <div class="container mx-auto flex flex-col gap-4">
+        <span class="small-description">Realizacje</span>
+        <h3 class="text-4xl">Nasze realizacje</h3>
+      </div>
+      <div class="gallery relative">
+        <div class="grid-item">
+          <img
+            class="mx-auto"
+            src="/images/Gallery/Photo-1.png"
+            alt="Image 1"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            class="mx-auto"
+            src="/images/Gallery/Photo-4.png"
+            alt="Image 1"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            class="mx-auto"
+            src="/images/Gallery/Photo-7.png"
+            alt="Image 1"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            class="mx-auto"
+            src="/images/Gallery/Photo-2.png"
+            alt="Image 1"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            class="mx-auto"
+            src="/images/Gallery/Photo-5.png"
+            alt="Image 1"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            class="mx-auto"
+            src="/images/Gallery/Photo-9.png"
+            alt="Image 1"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            class="mx-auto"
+            src="/images/Gallery/Photo-3.png"
+            alt="Image 1"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            class="mx-auto"
+            src="/images/Gallery/Photo-6.png"
+            alt="Image 1"
+          />
+        </div>
+        <div class="grid-item">
+          <img
+            class="mx-auto"
+            src="/images/Gallery/Photo-8.png"
+            alt="Image 1"
+          />
+        </div>
+        <button
+          id="expandButton"
+          class="absolute flex bottom-10 justify-center items-center gap-2 left-1/2 p-2 transform -translate-x-1/2 border border-black rounded-3xl"
+        >
+          Rozwiń
+          <img
+            src="/images/SVG/arrowDownBlack.svg"
+            alt="czarna strzalka w dol"
+          />
+        </button>
+      </div>
+    </section>
     <!-- Baner social  -->
     <section id="social">
       <div class="baner container mx-auto p-10">
@@ -406,6 +488,10 @@
         </div>
       </footer>
     </section>
+    <script
+      src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
+      defer
+    ></script>
     <script src="/scripts/script.js" defer></script>
   </body>
 </html>

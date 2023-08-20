@@ -64,6 +64,11 @@ p {
   background-color: var(--primary-color);
 }
 
+#realizacje {
+  background-color: var(--bg-intro);
+  color: var(--black-color);
+}
+
 #social {
   background-color: #fff;
   color: var(--grey-btn-color);
@@ -151,4 +156,63 @@ p {
 
 .color-grey-text {
   color: var(--grey-btn-color);
+}
+
+.gallery {
+  columns: 3 200px;
+  gap: 0.4rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid-item {
+  display: inline-block;
+  width: 100%;
+  padding: 5px;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox img {
+  width: auto;
+  height: 90vh;
+  object-fit: contain;
+}
+
+.lightbox button {
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.slider-content {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-image img {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.slider-content.active {
+  transform: translateX(0);
+}
+
+.slider-image.active img {
+  transform: translateX(0);
 }
