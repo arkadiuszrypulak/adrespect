@@ -1,6 +1,7 @@
 //Gallery
 const gallery = document.querySelector(".gallery");
 const gridItems = document.querySelectorAll(".grid-item");
+const expandButton = document.getElementById("expandButton");
 const lightboxImages = [];
 let currentImageIndex = 0;
 
@@ -14,71 +15,20 @@ gridItems.forEach((item) => {
   });
 });
 
-function openLightbox(imageSrc) {
+const openLightbox = (imageSrc) => {
   const lightbox = document.createElement("div");
-  lightbox.classList.add(
-    "fixed",
-    "top-0",
-    "left-0",
-    "w-screen",
-    "h-screen",
-    "bg-black",
-    "opacity-80",
-    "flex",
-    "justify-center",
-    "items-center",
-    "z-40"
-  );
+  lightbox.classList.add("lightbox");
 
   const image = document.createElement("img");
   image.src = imageSrc;
-  image.classList.add("w-auto", "h-9/10", "object-contain");
 
-  const prevButton = document.createElement("button");
-  prevButton.classList.add(
-    "border",
-    "border-white/10",
-    "rounded-full",
-    "absolute",
-    "bg-transparent",
-    "text-white",
-    "p-4",
-    "cursor-pointer",
-    "top-1/2",
-    "left-5",
-    "w-16",
-    "h-16",
-    "text-center",
-    "text-5xl",
-    "flex",
-    "justify-center",
-    "items-center",
-    "font-normal"
-  );
+  const prevButton = document.createElement("div");
+  prevButton.classList.add("lightbox-btn", "bottom-5", "left-5");
   prevButton.innerText = "<";
   prevButton.addEventListener("click", showPrevImage);
 
-  const nextButton = document.createElement("button");
-  nextButton.classList.add(
-    "border",
-    "border-white/10",
-    "rounded-full",
-    "bg-transparent",
-    "text-white",
-    "p-4",
-    "cursor-pointer",
-    "w-16",
-    "h-16",
-    "text-center",
-    "text-5xl",
-    "flex",
-    "justify-center",
-    "items-center",
-    "font-normal",
-    "absolute",
-    "top-1/2",
-    "right-5"
-  );
+  const nextButton = document.createElement("div");
+  nextButton.classList.add("lightbox-btn", "bottom-5", "right-5");
   nextButton.innerText = ">";
   nextButton.addEventListener("click", showNextImage);
 
@@ -92,24 +42,22 @@ function openLightbox(imageSrc) {
       document.body.removeChild(lightbox);
     }
   });
-}
+};
 
-// Poprawiona obsługa przycisków "Poprzednie" i "Następne"
-function showPrevImage() {
+const showPrevImage = () => {
   currentImageIndex =
     (currentImageIndex - 1 + lightboxImages.length) % lightboxImages.length;
   const newImageSrc = lightboxImages[currentImageIndex];
   const lightboxImage = document.querySelector(".lightbox img");
   lightboxImage.src = newImageSrc;
-}
+};
 
-function showNextImage() {
+const showNextImage = () => {
   currentImageIndex = (currentImageIndex + 1) % lightboxImages.length;
   const newImageSrc = lightboxImages[currentImageIndex];
   const lightboxImage = document.querySelector(".lightbox img");
   lightboxImage.src = newImageSrc;
-}
-const expandButton = document.getElementById("expandButton");
+};
 
 expandButton.addEventListener("click", () => {
   const newImageSrcs = [
@@ -129,7 +77,7 @@ expandButton.addEventListener("click", () => {
     newGridItem.classList.add("grid-item");
     const newImage = document.createElement("img");
     newImage.src = newImageSrc;
-    newImage.classList.add("mx-auto", "h-auto");
+    newImage.classList.add("mx-auto", "h-auto", "w-full");
     newGridItem.appendChild(newImage);
     gallery.appendChild(newGridItem);
 

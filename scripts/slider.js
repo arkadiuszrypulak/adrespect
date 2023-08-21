@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const rightBtn = document.getElementById("right-btn");
   const leftBtn = document.getElementById("left-btn");
 
-  console.log(slideContent, slideImg);
   let currentIndex = 0;
 
   rightBtn.addEventListener("click", () => {
