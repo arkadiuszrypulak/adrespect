@@ -148,11 +148,11 @@
     <!-- Intro -->
     <section id="intro">
       <div
-        id="slider"
-        class="h-screen flex flex-col items-center transition-transform duration-300 ease-in-out md:h-2/3 md:flex-row"
+        class="h-screen flex flex-col items-center overflow-hidden transition-transform duration-300 ease-in-out md:h-2/3 md:flex-row"
       >
+        <!-- slide kontent -->
         <div
-          class="h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11"
+          class="slide-content hidden transform -translate-x-full h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11 2xl:gap-16 2xl:p-28"
         >
           <h1 class="text-2xl py-2 md:text-4xl lg:text-5xl xl-text-6xl">
             Nowoczesna aranżacja Twojego ogrodu
@@ -166,12 +166,12 @@
             class="flex flex-col gap-1 mx-auto justify-center w-full py-2 lg:gap-10 lg:flex-row"
           >
             <div
-              class="contact-btn w-full rounded-3xl text-gray-100 m-auto p-3 md:py-3 md:px-6 text-center leading-6 w-1/2 cursor-pointer"
+              class="contact-btn w-full rounded-3xl text-gray-100 m-auto p-3 md:py-2 md:px-4 text-center leading-6 w-1/2 cursor-pointer"
             >
               Skontaktuj się z nami
             </div>
             <div
-              class="realisation-btn w-full flex justify-center items-center gap-3 rounded-3xl text-gray-100 flex-nowrap m-auto p-3 text-center leading-6 w-1/2 cursor-pointer md:py-3 md:px-6"
+              class="realisation-btn w-full flex justify-center items-center gap-3 rounded-3xl text-gray-100 flex-nowrap m-auto p-3 text-center leading-6 w-1/2 cursor-pointer md:py-2 md:px-4"
             >
               <span>Zobacz nasze realizacje</span>
               <img src="/images/SVG/arrowDown.svg" alt="Strzałka w dół" />
@@ -179,10 +179,77 @@
           </div>
         </div>
         <div
-          class="h-1/2 order-1 md:order-2 md:h-2/3 w-full md:w-1/2 z-10 relative"
+          class="slide-content hidden transform -translate-x-full h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11 2xl:gap-16 2xl:p-28"
+        >
+          <h1 class="text-2xl py-2 md:text-4xl lg:text-5xl xl-text-6xl">
+            Nowoczesna aranżacja Twojego ogrodu
+          </h1>
+          <p class="flex items-center text-justify flex-grow h-full text-sm">
+            Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+            realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+            podejściem do każdego projektu.
+          </p>
+          <div
+            class="flex flex-col gap-1 mx-auto justify-center w-full py-2 lg:gap-10 lg:flex-row"
+          >
+            <div
+              class="contact-btn w-full rounded-3xl text-gray-100 m-auto p-3 md:py-2 md:px-4 text-center leading-6 w-1/2 cursor-pointer"
+            >
+              Skontaktuj się z nami
+            </div>
+            <div
+              class="realisation-btn w-full flex justify-center items-center gap-3 rounded-3xl text-gray-100 flex-nowrap m-auto p-3 text-center leading-6 w-1/2 cursor-pointer md:py-2 md:px-4"
+            >
+              <span>Zobacz nasze realizacje</span>
+              <img src="/images/SVG/arrowDown.svg" alt="Strzałka w dół" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="slide-content hidden transform -translate-x-full h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11 2xl:gap-16 2xl:p-28"
+        >
+          <h1 class="text-2xl py-2 md:text-4xl lg:text-5xl xl-text-6xl">
+            Nowoczesna aranżacja Twojego ogrodu
+          </h1>
+          <p class="flex items-center text-justify flex-grow h-full text-sm">
+            Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+            realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+            podejściem do każdego projektu.
+          </p>
+          <div
+            class="flex flex-col gap-1 mx-auto justify-center w-full py-2 lg:gap-10 lg:flex-row"
+          >
+            <div
+              class="contact-btn w-full rounded-3xl text-gray-100 m-auto p-3 md:py-2 md:px-4 text-center leading-6 w-1/2 cursor-pointer"
+            >
+              Skontaktuj się z nami
+            </div>
+            <div
+              class="realisation-btn w-full flex justify-center items-center gap-3 rounded-3xl text-gray-100 flex-nowrap m-auto p-3 text-center leading-6 w-1/2 cursor-pointer md:py-2 md:px-4"
+            >
+              <span>Zobacz nasze realizacje</span>
+              <img src="/images/SVG/arrowDown.svg" alt="Strzałka w dół" />
+            </div>
+          </div>
+        </div>
+        <!-- slide image -->
+        <div
+          class="h-1/2 order-1 md:order-2 overflow-hidden md:h-2/3 w-full md:w-1/2 z-10 relative"
         >
           <img
-            class="h-full w-full"
+            class="slide-img hidden transform translate-x-full h-full w-full"
+            src="/images/Ogrod.png"
+            alt="baner realizacji ogrodu"
+          />
+
+          <img
+            class="slide-img hidden transform translate-x-full opacity-0 w-full"
+            src="/images/Gallery/Photo-1.png"
+            alt="baner realizacji ogrodu"
+          />
+
+          <img
+            class="slide-img hidden transform translate-x-full h-full w-full"
             src="/images/Ogrod.png"
             alt="baner realizacji ogrodu"
           />
@@ -329,7 +396,10 @@
       </div>
     </section>
     <!-- Realizacje -->
-    <section id="realizacje" class="flex flex-col pb-11 pt-32 gap-24 w-full">
+    <section
+      id="realizacje"
+      class="relative flex flex-col pb-11 pt-32 gap-24 w-full"
+    >
       <div class="container mx-auto flex flex-col gap-4">
         <span class="small-description">Realizacje</span>
         <h3 class="text-4xl">Nasze realizacje</h3>
@@ -337,7 +407,7 @@
       <div class="gallery relative">
         <div class="grid-item">
           <img
-            class="mx-auto"
+            class="mx-auto cursor-pointer"
             src="/images/Gallery/Photo-1.png"
             alt="Image 1"
           />
@@ -398,17 +468,14 @@
             alt="Image 1"
           />
         </div>
-        <button
-          id="expandButton"
-          class="absolute flex bottom-10 justify-center items-center gap-2 left-1/2 p-2 transform -translate-x-1/2 border border-black rounded-3xl"
-        >
-          Rozwiń
-          <img
-            src="/images/SVG/arrowDownBlack.svg"
-            alt="czarna strzalka w dol"
-          />
-        </button>
       </div>
+      <button
+        id="expandButton"
+        class="absolute flex bottom-10 justify-center items-center z-10 gap-2 left-1/2 p-2 transform -translate-x-1/2 border border-black rounded-3xl"
+      >
+        Rozwiń
+        <img src="/images/SVG/arrowDownBlack.svg" alt="czarna strzalka w dol" />
+      </button>
     </section>
     <!-- Baner social  -->
     <section id="social">
@@ -492,6 +559,8 @@
       src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
       defer
     ></script>
+    <script src="/scripts/slider.js" defer></script>
+    <script src="/scripts/gallery.js" defer></script>
     <script src="/scripts/script.js" defer></script>
   </body>
 </html>

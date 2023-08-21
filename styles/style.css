@@ -163,6 +163,8 @@ p {
   gap: 0.4rem;
   width: 100%;
   margin: 0 auto;
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 100%);
+  mask-image: linear-gradient(to top, transparent 0%, black 100%);
 }
 
 .grid-item {
@@ -215,4 +217,34 @@ p {
 
 .slider-image.active img {
   transform: translateX(0);
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-in-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: -translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
