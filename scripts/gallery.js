@@ -16,17 +16,70 @@ gridItems.forEach((item) => {
 
 function openLightbox(imageSrc) {
   const lightbox = document.createElement("div");
-  lightbox.classList.add("lightbox");
+  lightbox.classList.add(
+    "fixed",
+    "top-0",
+    "left-0",
+    "w-screen",
+    "h-screen",
+    "bg-black",
+    "opacity-80",
+    "flex",
+    "justify-center",
+    "items-center",
+    "z-40"
+  );
 
   const image = document.createElement("img");
   image.src = imageSrc;
+  image.classList.add("w-auto", "h-9/10", "object-contain");
 
   const prevButton = document.createElement("button");
-  prevButton.innerText = "Poprzednie";
+  prevButton.classList.add(
+    "border",
+    "border-white/10",
+    "rounded-full",
+    "absolute",
+    "bg-transparent",
+    "text-white",
+    "p-4",
+    "cursor-pointer",
+    "top-1/2",
+    "left-5",
+    "w-16",
+    "h-16",
+    "text-center",
+    "text-5xl",
+    "flex",
+    "justify-center",
+    "items-center",
+    "font-normal"
+  );
+  prevButton.innerText = "<";
   prevButton.addEventListener("click", showPrevImage);
 
   const nextButton = document.createElement("button");
-  nextButton.innerText = "Następne";
+  nextButton.classList.add(
+    "border",
+    "border-white/10",
+    "rounded-full",
+    "bg-transparent",
+    "text-white",
+    "p-4",
+    "cursor-pointer",
+    "w-16",
+    "h-16",
+    "text-center",
+    "text-5xl",
+    "flex",
+    "justify-center",
+    "items-center",
+    "font-normal",
+    "absolute",
+    "top-1/2",
+    "right-5"
+  );
+  nextButton.innerText = ">";
   nextButton.addEventListener("click", showNextImage);
 
   lightbox.appendChild(image);
@@ -61,14 +114,14 @@ const expandButton = document.getElementById("expandButton");
 expandButton.addEventListener("click", () => {
   const newImageSrcs = [
     "/images/Gallery/Photo-1.png",
-    "/images/Gallery/Photo-2.png",
-    "/images/Gallery/Photo-3.png",
     "/images/Gallery/Photo-4.png",
-    "/images/Gallery/Photo-5.png",
-    "/images/Gallery/Photo-6.png",
     "/images/Gallery/Photo-7.png",
-    "/images/Gallery/Photo-8.png",
+    "/images/Gallery/Photo-2.png",
+    "/images/Gallery/Photo-5.png",
     "/images/Gallery/Photo-9.png",
+    "/images/Gallery/Photo-3.png",
+    "/images/Gallery/Photo-6.png",
+    "/images/Gallery/Photo-8.png",
   ];
 
   newImageSrcs.forEach((newImageSrc) => {

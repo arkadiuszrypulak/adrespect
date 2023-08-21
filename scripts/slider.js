@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     showSlide(currentIndex);
   });
   leftBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1) % slideContent.length;
+    currentIndex =
+      (currentIndex - 1 + slideContent.length) % slideContent.length;
     showSlide(currentIndex);
   });
 

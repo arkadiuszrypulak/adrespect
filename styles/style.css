@@ -80,6 +80,14 @@ p {
   color: var(--grey-btn-color);
 }
 
+#left-btn {
+  background-color: var(--bg-oferta);
+}
+
+#right-btn {
+  background-color: var(--bg-oferta);
+}
+
 .baner {
   background-color: var(--primary-color);
 }
@@ -172,7 +180,7 @@ p {
   width: 100%;
   padding: 5px;
 }
-
+/* 
 .lightbox {
   position: fixed;
   top: 0;
@@ -184,21 +192,27 @@ p {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-}
-
+} */
+/* 
 .lightbox img {
   width: auto;
   height: 90vh;
   object-fit: contain;
-}
+} */
 
-.lightbox button {
-  background-color: #fff;
-  border: none;
-  padding: 10px 20px;
+/* .lightbox button {
+  border: 1px solid white;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
   cursor: pointer;
-  margin: 10px;
-  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+} */
+
+.lightbox button:hover {
+  background-color: #fff;
+  color: var(--black-color);
 }
 
 .slider-content {
