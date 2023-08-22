@@ -126,6 +126,9 @@ a:hover {
   .baner h4 span {
     letter-spacing: 1px;
   }
+  .lightbox img {
+    height: 75vh;
+  }
 }
 
 .contact-btn {
@@ -269,22 +272,6 @@ a:hover {
   transition: transform 0.3s ease-in-out;
 }
 
-.slider-content.active {
-  transform: translateX(0);
-}
-
-.slider-image.active img {
-  transform: translateX(0);
-}
-
-.slide-in-right {
-  animation: slideInRight 0.5s ease-in-out forwards;
-}
-
-.slide-in-left {
-  animation: slideInLeft 0.5s ease-in-out forwards;
-}
-
 @keyframes bounce {
   0%,
   100% {
@@ -302,28 +289,6 @@ a:hover {
   }
   50% {
     transform: translateX(-3px);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    transform: -translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
   }
 }
 

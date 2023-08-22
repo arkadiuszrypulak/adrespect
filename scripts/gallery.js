@@ -5,6 +5,33 @@ const expandButton = document.getElementById("expandButton");
 const lightboxImages = [];
 let currentImageIndex = 0;
 
+const images = [
+  "/images/Gallery/Photo-1.png",
+  "/images/Gallery/Photo-4.png",
+  "/images/Gallery/Photo-7.png",
+  "/images/Gallery/Photo-2.png",
+  "/images/Gallery/Photo-5.png",
+  "/images/Gallery/Photo-9.png",
+  "/images/Gallery/Photo-3.png",
+  "/images/Gallery/Photo-6.png",
+  "/images/Gallery/Photo-8.png",
+];
+
+document.addEventListener("DOMContentLoaded", () => {
+  images.forEach((imageSrc) => {
+    const gridItem = document.createElement("div");
+    gridItem.className = "grid-item";
+
+    const img = document.createElement("img");
+    img.className = "mx-auto w-full cursor-pointer";
+    img.src = imageSrc;
+    img.alt = "Image";
+
+    gridItem.appendChild(img);
+    gallery.appendChild(gridItem);
+  });
+});
+
 gridItems.forEach((item) => {
   const imgSrc = item.querySelector("img").src;
   lightboxImages.push(imgSrc);
@@ -60,19 +87,7 @@ const showNextImage = () => {
 };
 
 expandButton.addEventListener("click", () => {
-  const newImageSrcs = [
-    "/images/Gallery/Photo-1.png",
-    "/images/Gallery/Photo-4.png",
-    "/images/Gallery/Photo-7.png",
-    "/images/Gallery/Photo-2.png",
-    "/images/Gallery/Photo-5.png",
-    "/images/Gallery/Photo-9.png",
-    "/images/Gallery/Photo-3.png",
-    "/images/Gallery/Photo-6.png",
-    "/images/Gallery/Photo-8.png",
-  ];
-
-  newImageSrcs.forEach((newImageSrc) => {
+  images.forEach((newImageSrc) => {
     const newGridItem = document.createElement("div");
     newGridItem.classList.add("grid-item");
     const newImage = document.createElement("img");
