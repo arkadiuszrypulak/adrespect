@@ -17,20 +17,27 @@ const images = [
   "/images/Gallery/Photo-8.png",
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
-  images.forEach((imageSrc) => {
-    const gridItem = document.createElement("div");
-    gridItem.className = "grid-item";
+const createGallery = () => {
+  images.forEach((newImageSrc) => {
+    const newGridItem = document.createElement("div");
+    newGridItem.classList.add("grid-item");
+    const newImage = document.createElement("img");
+    newImage.src = newImageSrc;
+    newImage.className = "mx-auto w-full h-auto cursor-pointer";
+    newGridItem.appendChild(newImage);
+    gallery.appendChild(newGridItem);
 
-    const img = document.createElement("img");
-    img.className = "mx-auto w-full cursor-pointer";
-    img.src = imageSrc;
-    img.alt = "Image";
+    lightboxImages.push(newImageSrc);
 
-    gridItem.appendChild(img);
-    gallery.appendChild(gridItem);
+    newGridItem.addEventListener("click", () => {
+      openLightbox(newImageSrc);
+      currentImageIndex = lightboxImages.indexOf(newImageSrc);
+    });
   });
-});
+};
+
+document.addEventListener("DOMContentLoaded", createGallery);
+expandButton.addEventListener("click", createGallery);
 
 gridItems.forEach((item) => {
   const imgSrc = item.querySelector("img").src;
@@ -38,7 +45,7 @@ gridItems.forEach((item) => {
 
   item.addEventListener("click", () => {
     openLightbox(imgSrc);
-    currentImageIndex = lightboxImages.indexOf(imgSrc);
+    return (currentImageIndex = lightboxImages.indexOf(imgSrc));
   });
 });
 
@@ -50,12 +57,12 @@ const openLightbox = (imageSrc) => {
   image.src = imageSrc;
 
   const prevButton = document.createElement("div");
-  prevButton.classList.add("lightbox-btn", "bottom-4", "left-5");
+  prevButton.className = "lightbox-btn bottom-4 left-5";
   prevButton.innerText = "<";
   prevButton.addEventListener("click", showPrevImage);
 
   const nextButton = document.createElement("div");
-  nextButton.classList.add("lightbox-btn", "bottom-4", "right-5");
+  nextButton.className = "lightbox-btn bottom-4 right-5";
   nextButton.innerText = ">";
   nextButton.addEventListener("click", showNextImage);
 
@@ -85,22 +92,3 @@ const showNextImage = () => {
   const lightboxImage = document.querySelector(".lightbox img");
   lightboxImage.src = newImageSrc;
 };
-
-expandButton.addEventListener("click", () => {
-  images.forEach((newImageSrc) => {
-    const newGridItem = document.createElement("div");
-    newGridItem.classList.add("grid-item");
-    const newImage = document.createElement("img");
-    newImage.src = newImageSrc;
-    newImage.classList.add("mx-auto", "h-auto", "w-full");
-    newGridItem.appendChild(newImage);
-    gallery.appendChild(newGridItem);
-
-    lightboxImages.push(newImageSrc);
-
-    newGridItem.addEventListener("click", () => {
-      openLightbox(newImageSrc);
-      currentImageIndex = lightboxImages.indexOf(newImageSrc);
-    });
-  });
-});
