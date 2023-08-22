@@ -42,6 +42,14 @@ p {
   font-weight: 400;
 }
 
+a {
+  transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
 .menu {
   padding: 0.7rem;
   transition: all 0.5s ease-in-out;
@@ -86,6 +94,11 @@ p {
 
 #right-btn {
   background-color: var(--bg-oferta);
+}
+
+#right-btn:hover img,
+#left-btn:hover img {
+  animation: shake 0.5s infinite;
 }
 
 .baner {
@@ -142,6 +155,20 @@ p {
 .realisation-btn {
   border: 1px solid var(--primary-color);
   color: var(--primary-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.realisation-btn:hover img {
+  animation: bounce 0.5s infinite;
+}
+
+.meet-btn {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid;
+}
+
+.meet-btn:hover img {
+  animation: shake 0.5s infinite;
 }
 
 .more-btn {
@@ -153,6 +180,17 @@ p {
 
 .more-btn:hover {
   gap: 12px;
+}
+
+#expandButton {
+  color: var(--black-color);
+  border: 1px solid var(--black-color);
+  border-radius: 200px;
+  transition: all 0.3s ease-in-out;
+}
+
+#expandButton:hover img {
+  animation: bounce 0.5s infinite;
 }
 
 .small-description {
@@ -196,7 +234,6 @@ p {
 
 .lightbox img {
   width: auto;
-  height: 90vh;
   object-fit: contain;
 }
 
@@ -216,23 +253,10 @@ p {
   transition: all 0.5s ease-in-out;
 }
 
-/* Styl domyślny dla elementów, które mają być ukryte na początku */
-.fade-in-element {
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards; /* 1s to czas trwania animacji, można dostosować */
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.lightbox button:hover {
-  background-color: #fff;
-  color: var(--black-color);
+.lightbox-btn:active,
+.lightbox-btn:hover {
+  color: #808080;
+  animation: shake 0.5s infinite;
 }
 
 .slider-content {
@@ -259,6 +283,26 @@ p {
 
 .slide-in-left {
   animation: slideInLeft 0.5s ease-in-out forwards;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-3px);
+  }
 }
 
 @keyframes slideInRight {
@@ -292,8 +336,4 @@ p {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1.5s ease-in-out;
 }

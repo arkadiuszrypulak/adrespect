@@ -9,6 +9,10 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link href="styles/style.css" rel="stylesheet" />
   </head>
   <body>
@@ -146,13 +150,13 @@
       </div>
     </nav>
     <!-- Intro -->
-    <section id="intro" class="opacity-0 animate-fadeIn" data-fade-in="false">
+    <section id="intro" class="overflow-hidden">
       <div
         class="h-screen flex flex-col items-center overflow-hidden transition-transform duration-300 ease-in-out md:h-2/3 md:flex-row"
       >
         <!-- slide kontent -->
         <div
-          class="slide-content hidden transform -translate-x-full h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11 2xl:gap-16 2xl:p-28"
+          class="slide-content hidden opacity-0 transform -translate-x-full h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11 2xl:gap-16 2xl:p-28"
         >
           <h1 class="text-2xl py-2 md:text-4xl lg:text-5xl xl-text-6xl">
             Nowoczesna aranżacja Twojego ogrodu
@@ -165,21 +169,23 @@
           <div
             class="flex flex-col gap-1 mx-auto justify-center w-full py-2 lg:gap-10 lg:flex-row"
           >
-            <div
+            <a
+              href="#social"
               class="contact-btn w-full rounded-3xl text-gray-100 m-auto p-3 md:py-2 md:px-4 text-center leading-6 w-1/2 cursor-pointer"
             >
               Skontaktuj się z nami
-            </div>
-            <div
-              class="realisation-btn w-full flex justify-center items-center gap-3 rounded-3xl text-gray-100 flex-nowrap m-auto p-3 text-center leading-6 w-1/2 cursor-pointer md:py-2 md:px-4"
+            </a>
+            <a
+              href="#realizacje"
+              class="realisation-btn w-full flex justify-center items-center gap-3 rounded-3xl text-gray-100 flex-nowrap m-auto p-3 text-center leading-6 w-1/2 cursor-pointer md:py-2 md:px-4 hover:animate__bounce"
             >
               <span>Zobacz nasze realizacje</span>
               <img src="/images/SVG/arrowDown.svg" alt="Strzałka w dół" />
-            </div>
+            </a>
           </div>
         </div>
         <div
-          class="slide-content hidden transform -translate-x-full h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11 2xl:gap-16 2xl:p-28"
+          class="slide-content hidden opacity-0 transform -translate-x-full h-1/2 order-2 w-full flex flex-col p-5 lg:px-10 lg:py-8 md:order-1 md:w-1/2 lg:gap-11 2xl:gap-16 2xl:p-28"
         >
           <h1 class="text-2xl py-2 md:text-4xl lg:text-5xl xl-text-6xl">
             Aranżacjemy również tarasy
@@ -211,26 +217,26 @@
           class="h-1/2 order-1 md:order-2 overflow-hidden md:h-2/3 w-full md:w-1/2 z-10 relative"
         >
           <img
-            class="slide-img hidden transform translate-x-full opacity-0 h-1/2 w-full h-full"
+            class="fade-in animate__animated animate__fadeInUp slide-img hidden transform translate-x-full opacity-0 h-1/2 w-full h-full"
             src="/images/Ogrod.png"
             alt="baner realizacji ogrodu"
           />
 
           <img
-            class="slide-img hidden transform translate-x-full opacity-0 h-1/2 w-full h-full"
+            class="fade-in animate__animated animate__fadeInUp slide-img hidden transform translate-x-full opacity-0 h-1/2 w-full h-full"
             src="/images/Baner-firma.png"
             alt="baner realizacji ogrodu"
           />
 
           <div
             id="right-btn"
-            class="absolute flex justify-center items-center h-16 w-16 bottom-0 right-0 cursor-pointer"
+            class="fade-in animate__animated animate__fadeInUp absolute flex justify-center items-center h-16 w-16 bottom-0 right-0 cursor-pointer"
           >
             <img src="/images/SVG/arrowRight.svg" />
           </div>
           <div
             id="left-btn"
-            class="absolute flex justify-center items-center h-16 w-16 bottom-0 right-16 cursor-pointer"
+            class="fade-in animate__animated animate__fadeInUp absolute flex justify-center items-center h-16 w-16 bottom-0 right-16 cursor-pointer"
           >
             <img src="/images/SVG/arrowLeft.svg" />
           </div>
@@ -238,9 +244,11 @@
       </div>
     </section>
     <!-- Oferta -->
-    <section id="oferta">
+    <section id="oferta" class="overflow-hidden">
       <div class="min-h-2/3 pb-12">
-        <div class="fade-in-element container mx-auto">
+        <div
+          class="fade-in animate__animated animate__fadeInUp container mx-auto"
+        >
           <div class="p-10 md:py-24">
             <span class="small-description">Oferta</span>
             <h2 class="text-4xl lg:text-5xl pb-6 lg:pb-8">
@@ -260,7 +268,7 @@
         >
           <a
             href="#"
-            class="fade-in-element flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 md:w-full transition duration-300 hover:shadow-lg"
+            class="fade-in animate__animated animate__fadeInUp flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 md:w-full transition duration-300 hover:shadow-lg"
           >
             <div class="flex-grow pb-8 flex items-center">
               <img src="/images/SVG/pencil.svg" alt="zaczarowany ołówek" />
@@ -282,7 +290,7 @@
           </a>
           <a
             href="#"
-            class="fade-in-element flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 md:w-full transition duration-300 hover:shadow-lg"
+            class="fade-in animate__animated animate__fadeInUp flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 md:w-full transition duration-300 hover:shadow-lg"
           >
             <div class="flex-grow pb-8 flex items-center">
               <img src="/images/SVG/eye.svg" alt="Oko które widzi wszystko" />
@@ -304,7 +312,7 @@
           </a>
           <a
             href="#"
-            class="flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 md:w-full transition duration-300 hover:shadow-lg"
+            class="fade-in animate__animated animate__fadeInUp flex flex-col bg-white rounded-xl mx-auto p-10 w-4/5 md:w-full transition duration-300 hover:shadow-lg"
           >
             <div class="flex-grow pb-8 flex items-center">
               <img src="/images/SVG/stars.svg" alt="Gwiazdy" />
@@ -328,16 +336,16 @@
       </div>
     </section>
     <!-- O firmie -->
-    <section
-      id="firma"
-      class="opacity-0 animate-fadeIn overflow-hidden md:min-h-3/4"
-      data-fade-in="false"
-    >
+    <section id="firma" class="overflow-hidden md:min-h-3/4">
       <div class="flex flex-col justify-between items-start h-full md:flex-row">
-        <div class="flex-shrink-0 h-1/2 w-full overflow-hidden md:w-1/2">
+        <div
+          class="fade-in animate__animated animate__fadeInUp flex-shrink-0 h-1/2 w-full overflow-hidden md:w-1/2"
+        >
           <img src="/images/Baner-firma.png" alt="Obrazek" class="w-screen" />
         </div>
-        <div class="flex-grow self-center p-6 lg:p-10 min-h-1/2 h-auto w-1-2">
+        <div
+          class="fade-in animate__animated animate__fadeInUp flex-grow self-center p-6 lg:p-10 min-h-1/2 h-auto w-1-2"
+        >
           <div class="flex flex-col h-full justify-center gap-5 lg:gap-12">
             <div>
               <p class="color-grey-text text-sm">O firmie</p>
@@ -355,7 +363,7 @@
               małoobsługowe, dostosowane do współczesnego trybu życia.
             </p>
             <div
-              class="flex border justify-center items-center px-1 py-3 gap-4 rounded-3xl w-64 hover:gap-6 cursor-pointer"
+              class="meet-btn flex border justify-center items-center px-1 py-3 gap-4 rounded-3xl w-64 hover:gap-6 cursor-pointer"
             >
               <span>Poznaj nas bliżej</span>
               <img
@@ -370,8 +378,7 @@
     <!-- Realizacje -->
     <section
       id="realizacje"
-      class="opacity-0 animate-fadeIn relative flex flex-col pb-11 pt-32 gap-24 w-full"
-      data-fade-in="false"
+      class="fade-in animate__animated animate__fadeInUp relative flex flex-col pb-11 pt-32 gap-24 w-full overflow-hidden"
     >
       <div class="container mx-auto flex flex-col gap-4">
         <span class="small-description">Realizacje</span>
@@ -442,19 +449,18 @@
           />
         </div>
       </div>
-      <!-- <button
+      <button
         id="expandButton"
-        class="absolute flex bottom-10 justify-center items-center z-10 gap-2 left-1/2 p-2 transform -translate-x-1/2 border border-black rounded-3xl"
+        class="absolute flex bottom-10 justify-center items-center z-10 gap-2 left-1/2 p-2 transform -translate-x-1/2"
       >
         Rozwiń
         <img src="/images/SVG/arrowDownBlack.svg" alt="czarna strzalka w dol" />
-      </button> -->
+      </button>
     </section>
     <!-- Baner social  -->
-    <section id="social">
+    <section id="social" class="overflow-hidden">
       <div
-        class="opacity-0 animate-fadeIn baner container mx-auto p-10"
-        data-fade-in="false"
+        class="baner fade-in animate__animated animate__fadeInUp opacity-0 transition-all duration-700 ease-in-out transform translate-y-20 container mx-auto p-10"
       >
         <div
           class="flex flex-col lg:flex-row justify-center items-center h-max gap-8 lg:gap-16"
@@ -484,7 +490,10 @@
       </div>
     </section>
     <!-- Footer -->
-    <section id="footer">
+    <section
+      id="footer"
+      class="fade-in animate__animated animate__fadeInUp overflow-hidden"
+    >
       <footer class="container mx-auto py-20">
         <div class="flex items-center pb-16">
           <div class="flex justify-center lg:block w-1/2">
@@ -495,7 +504,7 @@
               >Daj znać, co możemy dla Ciebie zrobić!</span
             >
             <div
-              class="contact-btn w-full text-sm rounded-3xl text-gray-100 m-auto py-2 px-4 text-center leading-6 w-1/2 cursor-pointer md:w-3/5 lg:text-base lg:w-2/5"
+              class="contact-btn w-full text-sm rounded-3xl text-gray-100 m-auto py-2 px-4 text-center leading-6 w-1/2 cursor-pointer sm:w-3/5 lg:text-base lg:w-2/5"
             >
               Skontaktuj się z nami
             </div>
@@ -531,12 +540,10 @@
         </div>
       </footer>
     </section>
-    <script
-      src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"
-      defer
-    ></script>
+    <script src="/scripts/script.js" defer></script>
+    <script src="/scripts/fadeIn.js" defer></script>
+    <script src="/scripts/mobile.js" defer></script>
     <script src="/scripts/slider.js" defer></script>
     <script src="/scripts/gallery.js" defer></script>
-    <script src="/scripts/script.js" defer></script>
   </body>
 </html>

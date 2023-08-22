@@ -23,12 +23,12 @@ const openLightbox = (imageSrc) => {
   image.src = imageSrc;
 
   const prevButton = document.createElement("div");
-  prevButton.classList.add("lightbox-btn", "bottom-5", "left-5");
+  prevButton.classList.add("lightbox-btn", "bottom-4", "left-5");
   prevButton.innerText = "<";
   prevButton.addEventListener("click", showPrevImage);
 
   const nextButton = document.createElement("div");
-  nextButton.classList.add("lightbox-btn", "bottom-5", "right-5");
+  nextButton.classList.add("lightbox-btn", "bottom-4", "right-5");
   nextButton.innerText = ">";
   nextButton.addEventListener("click", showNextImage);
 

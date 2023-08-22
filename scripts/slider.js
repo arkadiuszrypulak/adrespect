@@ -20,19 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const showSlide = (currentIndex) => {
     slideContent.forEach((slide, i) => {
       if (i === currentIndex) {
-        slide.classList.remove("hidden", "-translate-x-full");
-        slide.classList.add("slide-in-left");
+        slide.classList.remove("hidden", "-translate-x-full", "opacity-0");
+        slide.classList.add("animate__fadeInLeft");
       } else {
-        slide.classList.add("hidden", "slide-in-left");
+        slide.classList.add("hidden", "animate__fadeOut");
       }
     });
 
     slideImg.forEach((slide, i) => {
       if (i === currentIndex) {
         slide.classList.remove("hidden", "translate-x-full", "opacity-0");
-        slide.classList.add("slide-in");
+        slide.classList.add("animate__fadeInRight");
       } else {
-        slide.classList.add("hidden", "slide-in-right");
+        slide.classList.add("hidden", "animate__fadeInRight");
       }
     });
   };
